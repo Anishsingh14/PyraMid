@@ -1,7 +1,3 @@
-#sum of two numbers
-a=1
-b=3
-print(a+b) #o/p = 4
 import socket
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
