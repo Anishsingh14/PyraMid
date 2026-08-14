@@ -24,18 +24,7 @@ level adding more complexity.
 
 ## What's Inside
 
-Logic-driven programs and mini utilities
-
-
-## Getting Started
-
-Clone the repository and run any script directly:
-
-```bash
-git clone https://github.com/<your-username>/PyraMid.git
-cd PyraMid
-python <folder>/<script_name>.py
-```
+Logic-Driven Programs and Mini Utilities !
 
 ## Purpose
 
