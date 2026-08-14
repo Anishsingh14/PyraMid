@@ -5,7 +5,7 @@
 <h1 align="center">PyraMid</h1>
 
 <p align="center">
-  A growing stack of Python programs — from the basics to the advanced.
+  A stack of Python programs.
 </p>
 
 <p align="center">
@@ -18,26 +18,14 @@
 
 ## About
 
-**PyraMid** is a personal collection of Python programs, built layer by layer —
-starting from simple scripts and steadily climbing toward more advanced projects.
+**PyraMid** is a collection of Python programs, steadily climbing towards complexity.
 Think of it as a pyramid of practice: a solid base of fundamentals, with each
 level adding more complexity.
 
 ## What's Inside
 
-| Level | Description |
-|-------|-------------|
-| Basic | Simple, beginner-friendly scripts |
-| Intermediate | Logic-driven programs and mini utilities |
-| Advanced | Larger, more complex projects |
+Logic-driven programs and mini utilities
 
-## Structure
-
-PyraMid/
-├── basic/
-├── intermediate/
-├── advanced/
-└── README.md
 
 ## Getting Started
 
@@ -60,7 +48,3 @@ Python fundamentals over time.
 This project is licensed under the MIT License.
 
 ---
-
-<p align="center">
-  <i>Built one layer at a time.</i>
-</p>
