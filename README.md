@@ -19,7 +19,7 @@
 ## About
 
 **PyraMid** is a collection of Python programs, steadily climbing towards complexity.
-Think of it as a pyramid of practice: a solid base of fundamentals, with each
+Think of it as a Pyramid : a solid base of fundamentals, with each
 level adding more complexity.
 
 ## What's Inside
