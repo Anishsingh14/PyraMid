@@ -6,6 +6,7 @@ password = input("Enter your password: ")
 errors = []
 
 #Reqirements_for_a_standard_secure_password
+
 if len(password) < 8:
     errors.append("Password must be at least 8 characters")
 
