@@ -4,10 +4,10 @@ import pandas as pd
 def analyze_personal_csv():
     print("PERSONAL BUDGET ANALYZER")
     
-    file_path = input("Enter the path to your CSV expense file (e.g., expenses.csv): ").strip()
+    file_path = input("Enter the path to your CSV expense file : ").strip()
 
     if not os.path.exists(file_path):
-        print("\n[!] File not found. Creating a sample 'my_expenses.csv' for you to test with...")
+        print("\n File not found. Creating a sample data. ")
         sample_data = {
             "Category": ["Food", "Transport", "Food", "Entertainment", "Utilities", "Food"],
             "Amount": [25.50, 12.00, 45.00, 30.00, 85.00, 15.20],
