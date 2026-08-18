@@ -7,7 +7,7 @@ def analyze_personal_csv():
     file_path = input("Enter the path to your file : ").strip()
 
     if not os.path.exists(file_path):
-        print("\n File not found. Creating a sample data. ")
+        print("\n File not found !, Creating a sample data. ")
         sample_data = {
             "Category": ["Food", "Transport", "Food", "Entertainment", "Utilities", "Food"],
             "Amount": [25.50, 12.00, 45.00, 30.00, 85.00, 15.20],
@@ -15,7 +15,7 @@ def analyze_personal_csv():
         }
         pd.DataFrame(sample_data).to_csv("my_expenses.csv", index=False)
         file_path = "my_expenses.csv"
-        print("Created 'my_expenses.csv' in your current directory!")
+        print("Created 'my_expenses.csv' in your current directory")
 
     # FILE_LOADING
     df = pd.read_csv(file_path)
@@ -47,7 +47,7 @@ def analyze_personal_csv():
     top_category = summary.iloc[0]["Category"]
 
     print("\n" + "=" * 40)
-    print("      YOUR PERSONAL BUDGET SUMMARY      ")
+    print("YOUR PERSONAL BUDGET SUMMARY")
     print("=" * 40)
     print(f"Total Overall Expenditure: ${total_overall:.2f}")
     print(f"Top Spending Category:     {top_category}")
