@@ -2,7 +2,7 @@ import os
 import pandas as pd
 
 def analyze_personal_csv():
-    print("=== PANDAS PERSONAL CSV EXPENSE ANALYZER ===")
+    print("PERSONAL BUDGET ANALYZER")
     
     # 1. ASK USER FOR FILE INPUT
     file_path = input("Enter the path to your CSV expense file (e.g., expenses.csv): ").strip()
