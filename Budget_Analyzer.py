@@ -4,7 +4,7 @@ import pandas as pd
 def analyze_personal_csv():
     print("PERSONAL BUDGET ANALYZER")
     
-    file_path = input("Enter the path to your CSV expense file : ").strip()
+    file_path = input("Enter the path to your file : ").strip()
 
     if not os.path.exists(file_path):
         print("\n File not found. Creating a sample data. ")
@@ -42,7 +42,7 @@ def analyze_personal_csv():
 
     summary = summary.sort_values(by="Total_Spent", ascending=False)
 
-    # 5. GENERATE PERSONALIZED REPORT & EXPORT
+    # PERSONALIZED REPORT & EXPORT
     total_overall = df["Amount"].sum()
     top_category = summary.iloc[0]["Category"]
 
@@ -59,5 +59,5 @@ def analyze_personal_csv():
     summary.to_csv(output_filename, index=False)
     print(f"\nReport saved to: {os.path.abspath(output_filename)}")
 
-if __name__ == "__main__":
+if __name__ == "main":
     analyze_personal_csv()
