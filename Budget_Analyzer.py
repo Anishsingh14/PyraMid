@@ -33,7 +33,7 @@ def analyze_personal_csv():
     df["Amount"] = pd.to_numeric(df["Amount"], errors="coerce")
     df = df.dropna(subset=["Amount"])
 
-    # 4. PANDAS FUNDAMENTALS: GROUPBY & AGGREGATIONS
+    # GROUPBY & AGGREGATIONS
     summary = df.groupby("Category")["Amount"].agg(
         Total_Spent="sum",
         Average_Cost="mean",
