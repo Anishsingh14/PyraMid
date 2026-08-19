@@ -22,7 +22,7 @@ def analyze_personal_csv():
     print("\nFile preview (First 3 rows):")
     print(df.head(3))
 
-    # DATA CLEANING & PREPROCESSING
+    
     df.columns = df.columns.str.strip().str.title()
     
     if "Amount" not in df.columns or "Category" not in df.columns:
