@@ -42,7 +42,7 @@ def analyze_personal_csv():
 
     summary = summary.sort_values(by="Total_Spent", ascending=False)
 
-    # PERSONALIZED REPORT & EXPORT
+    # PERSONALIZED REPORT  EXPORT
     total_overall = df["Amount"].sum()
     top_category = summary.iloc[0]["Category"]
 
