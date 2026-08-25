@@ -13,7 +13,7 @@ print("Loading data...")
 df = pd.read_csv('student_scores.csv')
 print(df.head())
 
-# 
+# Data Visualization
 plt.figure(figsize=(10, 6))
 sns.scatterplot(data=df, x='Hours', y='Scores')
 plt.title('Hours Studied vs Percentage Score')
