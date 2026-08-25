@@ -27,16 +27,16 @@ print("Initial plot saved as 'initial_plot.png'")
 X = df.iloc[:, :-1].values  # Features (Hours)
 y = df.iloc[:, 1].values    # Target (Scores)
 
-# Split into Training and Testing sets (80% train, 20% test)
+# Split Training and Testing sets (80% train, 20% test)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
 
-# 4. Train the Model
+# Train the Model
 print("\nTraining the Linear Regression model...")
 regressor = LinearRegression()
 regressor.fit(X_train, y_train)
 print("Training complete.")
 
-# 5. Plotting the Regression Line
+# Plotting the Regression Line
 line = regressor.coef_ * X + regressor.intercept_
 
 plt.figure(figsize=(10, 6))
@@ -50,7 +50,7 @@ plt.grid(True)
 plt.savefig('regression_result.png')
 print("Regression plot saved as 'regression_result.png'")
 
-# 6. Making Predictions
+# Making Predictions
 print("\nMaking predictions on test data...")
 y_pred = regressor.predict(X_test)
 
@@ -59,13 +59,12 @@ df_compare = pd.DataFrame({'Actual': y_test, 'Predicted': y_pred})
 print("\nComparison of Actual vs Predicted:")
 print(df_compare)
 
-# 7. Model Evaluation
+# Model Evaluation
 print("\nModel Evaluation:")
 print('Mean Absolute Error:', metrics.mean_absolute_error(y_test, y_pred))
 print('R-squared Score:', metrics.r2_score(y_test, y_pred))
 
-# 8. Custom Prediction
+# Custom Prediction
 hours = float(input("Enter the number of hours you want to study daily : "))
 own_pred = regressor.predict([[hours]])
 print(f"\nPredicted Score for {hours} hours/day: {own_pred[0]:.2f}%")
-
