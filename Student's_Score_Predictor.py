@@ -23,7 +23,7 @@ plt.grid(True)
 plt.savefig('initial_plot.png')
 print("Initial plot saved as 'initial_plot.png'")
 
-# 3. Prepare the data
+# Prepare Co-ordinates/Data
 X = df.iloc[:, :-1].values  # Features (Hours)
 y = df.iloc[:, 1].values    # Target (Scores)
 
