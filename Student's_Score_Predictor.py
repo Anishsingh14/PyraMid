@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn import metrics
 
-# 
+# Load Your dataset
 print("Loading data...")
 df = pd.read_csv('student_scores.csv')
 print(df.head())
