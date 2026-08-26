@@ -19,7 +19,7 @@ def analyze_personal_csv():
         file_path = "my_expenses.csv"
         print("Created 'my_expenses.csv' in your current directory")
 
-    #FILE LOADING
+    
     df = pd.read_csv(file_path)
     print("\nFile preview (First 3 rows):")
     print(df.head(3))
