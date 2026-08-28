@@ -22,7 +22,7 @@ def generate_thumbnail():
         print(f"Error loading image: {e}")
         return
 
-    # 3. NUMPY FUNDAMENTALS: CROP TO SQUARE (Slicing)
+    
     height, width = img_array.shape[0], img_array.shape[1]
     min_dim = min(height, width)
     
