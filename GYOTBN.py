@@ -1,3 +1,5 @@
+#Based_on_Numpy_Fundamentals
+
 import os
 import numpy as np
 from PIL import Image
@@ -26,19 +28,19 @@ def generate_thumbnail():
     height, width = img_array.shape[0], img_array.shape[1]
     min_dim = min(height, width)
     
-    # Calculate center bounding box coordinates
+    # Calcualting the center bounding box co-ordinates
     start_y = (height - min_dim) // 2
     start_x = (width - min_dim) // 2
     
-    # Crop central region using array slicing
+    # Cropping the central region using array slicing
     cropped_array = img_array[start_y:start_y + min_dim, start_x:start_x + min_dim]
 
-    # 4. NUMPY FUNDAMENTALS: RESIZE THUMBNAIL (Sub-sampling/Striding)
+    # NUMPY FUNDAMENTALS: RESIZE THUMBNAIL (Sub-sampling/Striding)
     # Downsample array by skipping pixels uniformly
     scale_factor = max(1, min_dim // 200)  # Target ~200x200 px
     thumbnail_array = cropped_array[::scale_factor, ::scale_factor]
 
-    # 5. SAVE PERSONALIZED OUTPUT
+    # SAVE PERSONALIZED OUTPUT
     output_img = Image.fromarray(thumbnail_array)
     output_filename = "personalized_thumbnail.png"
     output_img.save(output_filename)
