@@ -12,7 +12,7 @@ def generate_thumbnail():
         print("Error: File not found! Please check the path and try again.")
         return
 
-    # 2. LOAD IMAGE INTO A NUMPY ARRAY
+    # IMAGE LOADING INTO A NUMPY ARRAY
     try:
         img = Image.open(file_path)
         img_array = np.array(img)
