@@ -1,11 +1,3 @@
-"""
-INTERACTIVE NUMPY PROJECT: Personal Image Cropper & Thumbnail Generator
----------------------------------------------------------------------
-What it does:
-Prompts the user to enter any image file path, converts it to a NumPy array,
-crops it to a central square using slicing, and resizes it.
-"""
-
 import os
 import numpy as np
 from PIL import Image
