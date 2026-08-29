@@ -40,7 +40,7 @@ def generate_thumbnail():
     scale_factor = max(1, min_dim // 200)  # Target ~200x200 px
     thumbnail_array = cropped_array[::scale_factor, ::scale_factor]
 
-    # 
+    # SAVE YOUR PERSONALIZED OUTPUT 
     output_img = Image.fromarray(thumbnail_array)
     output_filename = "personalized_thumbnail.png"
     output_img.save(output_filename)
