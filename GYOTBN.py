@@ -7,7 +7,7 @@ from PIL import Image
 def generate_thumbnail():
     print("GYOTBN - GET YOUR OWN THUMBNAIL")
     
-    # PROVIDE THE PATH OF YOUR FILE
+    # PROVIDE THE FILE PATH
     file_path = input("Enter the path to your image file (e.g., photo.jpg): ").strip()
     
     if not os.path.exists(file_path):
@@ -21,7 +21,7 @@ def generate_thumbnail():
         print(f"\nImage loaded successfully!")
         print(f"Original Dimensions (Height, Width, Channels): {img_array.shape}")
     except Exception as e:
-        print(f"Error loading image: {e}")
+        print(f"Error in loading image: {e}")
         return
 
     # IMAGE SLICING FOR THUMBNAIL
@@ -36,7 +36,7 @@ def generate_thumbnail():
     cropped_array = img_array[start_y:start_y + min_dim, start_x:start_x + min_dim]
 
     # Sub-Sampling/Striding for Resizing the Thumbnail
-    # Downsample array by skipping pixels uniformly
+    # Skipping pixels uniformly for Downsampling the array
     scale_factor = max(1, min_dim // 200)  # Target ~200x200 px
     thumbnail_array = cropped_array[::scale_factor, ::scale_factor]
 
@@ -45,7 +45,7 @@ def generate_thumbnail():
     output_filename = "personalized_thumbnail.png"
     output_img.save(output_filename)
 
-    print(f"\nSuccess! Thumbnail processed with NumPy shape: {thumbnail_array.shape}")
+    print(f"\nSuccess! Thumbnail Generated : {thumbnail_array.shape}")
     print(f"Saved output as: {os.path.abspath(output_filename)}")
 
 if __name__ == "__main__":
