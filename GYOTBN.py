@@ -35,7 +35,7 @@ def generate_thumbnail():
     # Cropping the central region using array slicing
     cropped_array = img_array[start_y:start_y + min_dim, start_x:start_x + min_dim]
 
-    # NUMPY FUNDAMENTALS: RESIZE THUMBNAIL (Sub-sampling/Striding)
+    # Sub-Sampling/Striding for Resizing the Thumbnail
     # Downsample array by skipping pixels uniformly
     scale_factor = max(1, min_dim // 200)  # Target ~200x200 px
     thumbnail_array = cropped_array[::scale_factor, ::scale_factor]
