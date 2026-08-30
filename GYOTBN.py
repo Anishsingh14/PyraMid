@@ -7,7 +7,7 @@ from PIL import Image
 def generate_thumbnail():
     print("GYOTBN - GET YOUR OWN THUMBNAIL")
     
-    # PROVIDE THE FILE PATH
+    
     file_path = input("Enter the path to your image file (e.g., photo.jpg): ").strip()
     
     if not os.path.exists(file_path):
