@@ -24,7 +24,7 @@ def generate_thumbnail():
         print(f"Error in loading image: {e}")
         return
 
-    
+    # IMAGE SLICING FOR THUMBNAIL
     height, width = img_array.shape[0], img_array.shape[1]
     min_dim = min(height, width)
     
